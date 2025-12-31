@@ -65,7 +65,6 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
-          suppressHydrationWarning
       >
         {children}
         <Toaster />
