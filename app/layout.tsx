@@ -6,8 +6,6 @@ import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const dynamic = "force-dynamic"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://gloriamenezesadv.com.br'),
   title: 'Glória Menezes - Advogada especialista em Crédito Rural',
