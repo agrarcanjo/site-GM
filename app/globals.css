@@ -1,0 +1,211 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --brown: #82502B;
+  --dark-green: #35422B;
+  --light-green: #A6B994;
+  --background: #FFFFFF;
+  --foreground: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-brown {
+  color: var(--brown);
+}
+
+.text-dark-green {
+  color: var(--dark-green);
+}
+
+.text-light-green {
+  color: var(--light-green);
+}
+
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green);
+}
+
+.bg-light-green {
+  background-color: var(--light-green);
+}
+
+.border-brown {
+  border-color: var(--brown);
+}
+
+.border-dark-green {
+  border-color: var(--dark-green);
+}
+
+.border-light-green {
+  border-color: var(--light-green);
+}
+
+/* Smooth scrolling offset for fixed header */
+.section-padding {
+  scroll-margin-top: 80px;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-count-up {
+  animation: countUp 1s ease-out;
+}
+
+/* WhatsApp button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: #25D366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: var(--brown);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(130, 80, 43, 0.2);
+}
+
+.btn-primary:hover {
+  background: #6d3d1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(130, 80, 43, 0.3);
+}
+
+.btn-secondary {
+  background: var(--dark-green);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(53, 66, 43, 0.2);
+}
+
+.btn-secondary:hover {
+  background: #2a3321;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(53, 66, 43, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation menu active state */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--brown);
+}
+
+.nav-link.active {
+  color: var(--brown);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brown);
+}
