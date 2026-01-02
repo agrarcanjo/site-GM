@@ -58,7 +58,7 @@ const Areas = () => {
     if (!mounted) return null
 
     return (
-        <section id="areas" className="py-20 bg-white section-padding">
+        <section id="areas" className="py-20 bg-[#0f0f0f] section-padding">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}
@@ -67,10 +67,10 @@ const Areas = () => {
                     transition={{duration: 0.8}}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-dark-green mb-6">
+                    <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-light-green mb-6">
                         Áreas de Atuação
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto italic">
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto italic">
                         "Assessoria jurídica completa para o agronegócio, unindo rigor técnico e visão estratégica em
                         todas as etapas da atividade rural."
                     </p>
@@ -83,19 +83,19 @@ const Areas = () => {
                             initial={{opacity: 0, y: 50}}
                             animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
                             transition={{duration: 0.8, delay: index * 0.1}}
-                            className="bg-gray-50 p-8 rounded-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                            className="bg-[#1a1a1a] p-8 rounded-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-800"
                         >
                             <div className="flex justify-center mb-6">
-                                <div className="w-16 h-16 bg-brown/10 rounded-full flex items-center justify-center">
+                                <div className="w-16 h-16 bg-brown/20 rounded-full flex items-center justify-center">
                                     <area.icon className="w-8 h-8 text-brown"/>
                                 </div>
                             </div>
 
-                            <h3 className="text-xl font-bold text-dark-green mb-4 text-center">
+                            <h3 className="text-xl font-bold text-light-green mb-4 text-center">
                                 {area.title}
                             </h3>
 
-                            <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                            <p className="text-gray-400 mb-6 text-center leading-relaxed">
                                 {area.description}
                             </p>
                         </motion.div>

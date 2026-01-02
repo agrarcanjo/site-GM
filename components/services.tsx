@@ -67,7 +67,7 @@ const Services = () => {
     ]
 
     return (
-        <section id="servicos" className="py-20 bg-white section-padding">
+        <section id="servicos" className="py-20 bg-gray-100 section-padding">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}
@@ -136,7 +136,7 @@ const Services = () => {
                     initial={{opacity: 0, y: 50}}
                     animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
                     transition={{duration: 0.8, delay: 0.8}}
-                    className="text-center mt-16 bg-gradient-to-r from-dark-green to-brown p-8 rounded-2xl text-white"
+                    className="text-center mt-16 bg-gradient-to-r from-dark-green to-brown p-8 rounded-2xl text-dark-green"
                 >
                     <h3 className="text-2xl font-bold mb-4">
                         Precisa de assessoria jurídica especializada?

@@ -64,7 +64,7 @@ const Hero = () => {
                                 initial={{opacity: 0, y: 30}}
                                 animate={{opacity: 1, y: 0}}
                                 transition={{duration: 0.8, delay: 0.4}}
-                                className="text-xl lg:text-2xl mb-4 text-gray-100"
+                                className="text-xl lg:text-2xl mb-4 text-gray-100 text-justify"
                             >
                                 Estratégia jurídica para superar o endividamento e proteger o seu legado no campo
                             </motion.p>
@@ -73,7 +73,7 @@ const Hero = () => {
                                 initial={{opacity: 0, y: 30}}
                                 animate={{opacity: 1, y: 0}}
                                 transition={{duration: 0.8, delay: 0.6}}
-                                className="text-lg mb-8 text-gray-200 leading-relaxed"
+                                className="text-lg mb-8 text-gray-200 leading-relaxed text-justify"
                             >
                                 Com sólida experiência no setor bancário, atuamos para restaurar a viabilidade econômica
                                 e a capacidade produtiva do produtor rural, transformando passivos em soluções

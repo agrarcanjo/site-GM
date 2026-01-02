@@ -50,7 +50,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <section id="depoimentos" className="py-20 bg-white section-padding">
+        <section id="depoimentos" className="py-20 bg-gray-100 section-padding">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}

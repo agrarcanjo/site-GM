@@ -36,6 +36,7 @@ const Header = () => {
                                 fill
                                 className="object-contain"
                                 priority
+                                onClick={() => scrollToSection('inicio')}
                             />
                         </div>
                     </div>
