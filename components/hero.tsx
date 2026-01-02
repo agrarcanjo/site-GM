@@ -25,7 +25,6 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-0">
-      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           {mounted && (
@@ -43,10 +42,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -69,8 +66,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl lg:text-2xl mb-4 text-gray-100"
             >
-              Advogada especialista em{' '}
-              <span className="font-semibold text-light-green">Crédito Rural</span>
+              Estratégia jurídica para superar o endividamento e proteger o seu legado no campo
             </motion.p>
 
             <motion.p
@@ -79,8 +75,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg mb-8 text-gray-200 leading-relaxed"
             >
-              Assessoria jurídica especializada para produtores rurais, cooperativas e empresas do agronegócio.
-              Soluções eficazes em negociação de dívidas, CPR, contratos rurais e muito mais.
+              Com sólida experiência no setor bancário, atuamos para restaurar a viabilidade econômica e a capacidade produtiva do produtor rural, transformando passivos em soluções sustentáveis.
             </motion.p>
 
             <motion.div
@@ -99,48 +94,39 @@ const Hero = () => {
 
               <button
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-green transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-green transition-all duration-300 hover:scale-105"
               >
                 <Phone size={20} className="mr-2" />
-                Entre em Contato
+                Agendar Consulta
               </button>
             </motion.div>
           </motion.div>
 
-          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative hidden lg:block"
           >
-            <div className="relative aspect-[4/5] max-w-md mx-auto">
+            <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/lawyer-photo-main.png"
                 alt="Dra. Glória Menezes"
                 fill
-                className="object-cover rounded-2xl shadow-2xl"
+                className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-dark-green/20 to-transparent"></div>
             </div>
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="text-white"
-          >
-            <ArrowDown size={24} />
-          </motion.div>
+          <ArrowDown className="w-8 h-8 text-white animate-bounce" />
         </motion.div>
       </div>
     </section>

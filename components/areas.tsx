@@ -4,14 +4,11 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { 
-  Wheat, 
   Banknote, 
   FileCheck, 
-  Gavel, 
   Leaf, 
   Building2,
-  CircleDollarSign,
-  Users
+  Lightbulb
 } from 'lucide-react'
 
 const Areas = () => {
@@ -28,163 +25,80 @@ const Areas = () => {
   const areas = [
     {
       icon: Banknote,
-      title: 'Crédito Rural',
-      description: 'Especialização em todas as modalidades de crédito rural, desde financiamentos de custeio até investimentos em longo prazo.',
-      details: [
-        'Custeio agrícola e pecuário',
-        'Financiamento para investimentos',
-        'Comercialização e industrialização',
-        'PRONAF e programas governamentais'
-      ]
-    },
-    {
-      icon: CircleDollarSign,
-      title: 'Renegociação de Dívidas',
-      description: 'Atuação estratégica na renegociação de passivos rurais, buscando as melhores condições para nossos clientes.',
-      details: [
-        'Alongamento de dívidas vencidas',
-        'Prorrogação compulsória',
-        'Novação de contratos',
-        'Defesa em execuções fiscais'
-      ]
+      title: 'Crédito Rural e Endividamento',
+      description: 'Consultoria estratégica em operações de financiamento, prorrogação de dívidas rurais, reversão de desclassificação de operações e defesa em execuções, com foco na preservação do fluxo de caixa e do patrimônio do produtor.',
+      details: []
     },
     {
       icon: FileCheck,
-      title: 'CPR e Contratos',
-      description: 'Elaboração e análise de Cédulas de Produto Rural e contratos agrícolas com segurança jurídica.',
-      details: [
-        'CPR física e financeira',
-        'Contratos de compra e venda',
-        'Arrendamento rural',
-        'Parceria agrícola'
-      ]
-    },
-    {
-      icon: Gavel,
-      title: 'Contencioso Rural',
-      description: 'Defesa judicial e extrajudicial em questões relacionadas ao agronegócio.',
-      details: [
-        'Ações de cobrança',
-        'Execuções de títulos',
-        'Embargos e defesas',
-        'Recursos e apelações'
-      ]
+      title: 'Direito Agrário e Imobiliário',
+      description: 'Regularização de propriedades, gestão de conflitos possessórios e estruturação de contratos de arrendamento e parceria, com foco em segurança documental e estabilidade da atividade rural.',
+      details: []
     },
     {
       icon: Leaf,
-      title: 'Direito Ambiental',
-      description: 'Consultoria em legislação ambiental aplicada ao setor rural.',
-      details: [
-        'Licenciamento ambiental',
-        'CAR e regularização',
-        'Reserva legal',
-        'Defesa em autuações'
-      ]
+      title: 'Gestão Ambiental e Sustentabilidade',
+      description: 'Assessoria em licenciamentos, conformidade com o Código Florestal e defesa em processos administrativos ambientais, alinhando produção e responsabilidade socioambiental.',
+      details: []
     },
     {
       icon: Building2,
-      title: 'Cooperativas',
-      description: 'Assessoria jurídica completa para cooperativas agropecuárias.',
-      details: [
-        'Constituição e registro',
-        'Governança corporativa',
-        'Assembleias e atas',
-        'Contratos cooperativos'
-      ]
+      title: 'Planejamento Sucessório e Societário',
+      description: 'Estruturação de holdings rurais e protocolos familiares para garantir uma sucessão organizada, redução de conflitos e preservação do patrimônio ao longo das gerações.',
+      details: []
     },
     {
-      icon: Wheat,
-      title: 'Direito Agrário',
-      description: 'Consultoria em questões fundiárias e propriedade rural.',
-      details: [
-        'Regularização fundiária',
-        'Usucapião rural',
-        'Desapropriação',
-        'Sucessão rural'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Consultoria Preventiva',
-      description: 'Orientação jurídica para prevenir conflitos e garantir segurança nas operações.',
-      details: [
-        'Due diligence rural',
-        'Compliance agrícola',
-        'Planejamento sucessório',
-        'Gestão de riscos'
-      ]
+      icon: Lightbulb,
+      title: 'Propriedade Intelectual e Inovação no Agronegócio',
+      description: 'Proteção de cultivares, marcas e tecnologias aplicadas ao campo, assegurando competitividade e segurança jurídica em projetos de inovação.',
+      details: []
     }
   ]
 
-  if (!mounted) {
-    return (
-      <section id="areas" className="section-padding bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-dark-green mb-4">
-              Áreas de Atuação
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Soluções jurídicas especializadas para o agronegócio
-            </p>
-          </div>
-        </div>
-      </section>
-    )
-  }
+  if (!mounted) return null
 
   return (
-    <section id="areas" className="section-padding bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="areas" className="py-20 bg-white section-padding">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-dark-green mb-4">
+          <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-dark-green mb-6">
             Áreas de Atuação
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Soluções jurídicas especializadas para o agronegócio
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto italic">
+            "Assessoria jurídica completa para o agronegócio, unindo rigor técnico e visão estratégica em todas as etapas da atividade rural."
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {areas.map((areaItem, index) => {
-            const IconComponent = areaItem.icon
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
-                className="card-hover bg-white p-6 rounded-xl border border-gray-100 group"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-brown/10 rounded-lg mb-4 group-hover:bg-brown/20 transition-colors">
-                  <IconComponent className="w-6 h-6 text-brown" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {areas.map((area, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="bg-gray-50 p-8 rounded-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+            >
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-brown/10 rounded-full flex items-center justify-center">
+                  <area.icon className="w-8 h-8 text-brown" />
                 </div>
-                
-                <h3 className="text-lg font-bold text-dark-green mb-3">
-                  {areaItem.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {areaItem.description}
-                </p>
-                
-                <div className="space-y-2">
-                  {areaItem.details.map((detail, idx) => (
-                    <div key={idx} className="flex items-start">
-                      <div className="w-1.5 h-1.5 bg-light-green rounded-full mt-2 mr-2 flex-shrink-0"></div>
-                      <span className="text-sm text-gray-600">{detail}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            )
-          })}
+              </div>
+              
+              <h3 className="text-xl font-bold text-dark-green mb-4 text-center">
+                {area.title}
+              </h3>
+              
+              <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                {area.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

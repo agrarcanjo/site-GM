@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useEffect, useState } from 'react'
@@ -96,8 +95,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'gloriamenezesadv@gmail.com',
-      action: () => window.open('mailto:gloriamenezesadv@gmail.com', '_blank')
+      content: 'gloriamenezes.adv@gmail.com',
+      action: () => window.open('mailto:gloriamenezes.adv@gmail.com', '_blank')
     },
     {
       icon: MapPin,
@@ -114,13 +113,11 @@ const Contact = () => {
   ]
 
   const subjectOptions = [
-    'Crédito Rural',
-    'Negociação de Dívidas',
-    'CPR e Operações de Crédito',
-    'Contratos do Agronegócio',
-    'Recuperação Judicial',
-    'Direito Societário Rural',
-    'Compliance Ambiental',
+    'Crédito Rural e Endividamento',
+    'Direito Agrário e Imobiliário',
+    'Gestão Ambiental e Sustentabilidade',
+    'Planejamento Sucessório e Societário',
+    'Propriedade Intelectual e Inovação',
     'Outro assunto'
   ]
 
@@ -137,13 +134,12 @@ const Contact = () => {
           <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-dark-green mb-6">
             Entre em Contato
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Estamos prontos para atender suas demandas jurídicas no agronegócio
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto italic">
+            "Nossa atuação une o rigor do Direito Agrário à expertise operacional do Crédito Rural, entregando soluções que se alinham à realidade das instituições financeiras e atendem às necessidades do produtor."
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -173,7 +169,6 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Social Media */}
             <div>
               <h4 className="text-lg font-semibold text-dark-green mb-4">
                 Redes Sociais
@@ -203,133 +198,103 @@ const Contact = () => {
                 </button>
               </div>
             </div>
-
-            {/* Quick WhatsApp Button */}
-            <div className="mt-8 p-6 bg-green-50 rounded-lg border border-green-200">
-              <h4 className="text-lg font-semibold text-green-800 mb-2">
-                Atendimento Rápido via WhatsApp
-              </h4>
-              <p className="text-green-700 mb-4">
-                Para uma consulta rápida, fale diretamente conosco pelo WhatsApp
-              </p>
-              <button
-                onClick={() => window.open('https://wa.me/5562982144754?text=Olá, gostaria de saber mais sobre seus serviços de advocacia em crédito rural.', '_blank')}
-                className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
-              >
-                <MessageSquare size={20} className="mr-2" />
-                Iniciar Conversa
-              </button>
-            </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
           >
-            <h3 className="text-2xl font-bold text-dark-green mb-6">
-              Envie sua Mensagem
-            </h3>
-
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown/20 focus:border-brown transition-colors"
-                    placeholder="Seu nome completo"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown/20 focus:border-brown transition-colors"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown/20 focus:border-brown transition-colors"
-                    placeholder="(00) 00000-0000"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Assunto *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown/20 focus:border-brown transition-colors"
-                  >
-                    <option value="">Selecione o assunto</option>
-                    {subjectOptions.map((option, index) => (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Nome Completo *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown focus:border-transparent transition-all"
+                  placeholder="Seu nome"
+                />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown focus:border-transparent transition-all"
+                  placeholder="seu@email.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  Telefone *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown focus:border-transparent transition-all"
+                  placeholder="(00) 00000-0000"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  Assunto *
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown focus:border-transparent transition-all"
+                >
+                  <option value="">Selecione um assunto</option>
+                  {subjectOptions.map((option, index) => (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Mensagem *
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
-                  rows={6}
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown/20 focus:border-brown transition-colors resize-none"
-                  placeholder="Descreva sua necessidade jurídica..."
-                ></textarea>
+                  rows={5}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brown focus:border-transparent transition-all resize-none"
+                  placeholder="Descreva sua necessidade..."
+                />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-semibold transition-all ${
-                  isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'btn-primary hover:shadow-lg'
-                } flex items-center justify-center space-x-2`}
+                className="w-full bg-brown text-white py-4 px-6 rounded-lg font-semibold hover:bg-brown/90 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -344,16 +309,6 @@ const Contact = () => {
                 )}
               </button>
             </form>
-
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div className="text-sm text-gray-600">
-                  <p className="font-medium">Seus dados estão seguros</p>
-                  <p>Utilizamos suas informações apenas para responder sua solicitação.</p>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
