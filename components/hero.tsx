@@ -24,7 +24,7 @@ const Hero = () => {
     }
 
     return (
-        <section id="inicio" className="relative h-screen overflow-hidden">
+        <section id="inicio" className="relative min-h-screen overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <div className="relative w-full h-full">
                     {mounted && (
@@ -42,14 +42,14 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="relative z-10 w-full h-full flex items-center">
+            <div className="relative z-10 w-full h-full flex items-center pt-32 sm:pt-24 lg:pt-0">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="grid lg:grid-cols-2 gap-32 items-end w-full">
+                    <div className="grid lg:grid-cols-2 gap-32 items-end w-full py-8 lg:py-0">
                         <motion.div
                             initial={{opacity: 0, x: -50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8}}
-                            className="text-white pb-56"
+                            className="text-white pb-8 lg:pb-56"
                         >
                             <motion.h1
                                 initial={{opacity: 0, y: 30}}
@@ -88,7 +88,7 @@ const Hero = () => {
                             >
                                 <button
                                     onClick={openWhatsApp}
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-light-green text-dark-green font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] text-white font-semibold rounded-lg hover:bg-[#20BA5A] transition-all duration-300 hover:scale-105 shadow-lg"
                                 >
                                     <MessageSquare size={20} className="mr-2"/>
                                     WhatsApp
@@ -108,7 +108,7 @@ const Hero = () => {
                             initial={{opacity: 0, x: 50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8, delay: 0.4}}
-                            className="relative hidden lg:flex justify-end items-end h-[calc(120vh-8rem)]"
+                            className="relative hidden lg:flex justify-end items-end h-[calc(100vh+3rem)]"
                         >
                             <div className="relative w-full h-full" style={{marginBottom: '10px'}}>
                                 <Image
@@ -122,13 +122,29 @@ const Hero = () => {
                             </div>
                         </motion.div>
                     </div>
+
+                    <motion.div
+                        initial={{opacity: 0, scale: 0.8}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 0.8, delay: 0.6}}
+                        className="lg:hidden relative w-full h-[400px] mt-8 mb-16"
+                    >
+                        <Image
+                            src="/lawyer-photo-main.png"
+                            alt="Dra. Glória Menezes"
+                            fill
+                            className="object-contain object-bottom"
+                            priority
+                            sizes="100vw"
+                        />
+                    </motion.div>
                 </div>
 
                 <motion.div
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1, delay: 1.2}}
-                    className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20"
+                    className="absolute bottom-8 lg:bottom-16 left-1/2 transform -translate-x-1/2 z-20"
                 >
                     <ArrowDown className="w-8 h-8 text-white animate-bounce"/>
                 </motion.div>
