@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Glória Menezes Advocacia',
     images: [
       {
-        url: '/og-image.png',
+        url: '/logo.png',
         width: 1200,
         height: 630,
       },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Glória Menezes - Advogada especialista em Crédito Rural',
     description: 'Especialista em crédito rural e direito do agronegócio.',
-    images: ['/og-image.png'],
+    images: ['/logo.png'],
   },
   icons: {
     icon: '/favicon.svg',
