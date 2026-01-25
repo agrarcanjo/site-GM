@@ -5,6 +5,7 @@ import About from '@/components/about'
 import Services from '@/components/services'
 import Areas from '@/components/areas'
 import Testimonials from '@/components/testimonials'
+import FAQ from '@/components/faq'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Services />
       <Areas />
       <Testimonials />
+      <FAQ />
       <Contact />
       <Footer />
       <WhatsAppButton />

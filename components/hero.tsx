@@ -108,9 +108,9 @@ const Hero = () => {
                             initial={{opacity: 0, x: 50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8, delay: 0.4}}
-                            className="relative hidden lg:flex justify-end items-end h-[calc(100vh+3rem)]"
+                            className="relative hidden lg:flex justify-end items-end"
                         >
-                            <div className="relative w-full h-full" style={{marginBottom: '10px'}}>
+                            <div className="relative w-full max-h-[calc(100vh-160px)] flex items-end justify-end" style={{marginBottom: '10px'}}>
                                 <Image
                                     src="/lawyer-photo-main.png"
                                     alt="Dra. Glória Menezes"
