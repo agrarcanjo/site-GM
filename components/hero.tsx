@@ -38,14 +38,14 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="relative z-10 w-full h-full flex items-center pt-32 sm:pt-24 lg:pt-0">
+            <div className="relative z-10 w-full min-h-screen flex items-center lg:pt-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="grid lg:grid-cols-2 gap-32 items-end w-full py-8 lg:py-0">
+                    <div className="grid lg:grid-cols-2 gap-32 items-end w-full py-20 lg:py-12">
                         <motion.div
                             initial={{opacity: 0, x: -50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8}}
-                            className="text-white pb-8 lg:pb-56"
+                            className="text-white pb-8 lg:pb-16"
                         >
                             <motion.p
                                 initial={{opacity: 0, y: 30}}
@@ -87,9 +87,9 @@ const Hero = () => {
                             initial={{opacity: 0, x: 50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8, delay: 0.4}}
-                            className="relative hidden lg:flex justify-end items-end h-[calc(100vh+3rem)]"
+                            className="relative hidden lg:flex justify-end items-end"
                         >
-                            <div className="relative w-full h-full" style={{marginBottom: '10px'}}>
+                            <div className="relative w-full h-[calc(100vh-180px)] min-h-[500px] max-h-[850px]">
                                 <Image
                                     src="/lawyer-photo-main.png"
                                     alt="Dra. Glória Menezes"
