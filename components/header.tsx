@@ -73,6 +73,12 @@ const Header = () => {
                             Depoimentos
                         </button>
                         <button
+                            onClick={() => scrollToSection('faq')}
+                            className="nav-link text-white hover:text-light-green font-medium transition-colors"
+                        >
+                            FAQ
+                        </button>
+                        <button
                             onClick={() => scrollToSection('contato')}
                             className="nav-link text-white hover:text-light-green font-medium transition-colors"
                         >
@@ -140,6 +146,12 @@ const Header = () => {
                             className="block w-full text-left px-4 py-3 text-white hover:text-light-green hover:bg-white/10 rounded transition-colors"
                         >
                             Depoimentos
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('faq')}
+                            className="block w-full text-left px-4 py-3 text-white hover:text-light-green hover:bg-white/10 rounded transition-colors"
+                        >
+                            Perguntas Frequentes
                         </button>
                         <button
                             onClick={() => scrollToSection('contato')}
