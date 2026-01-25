@@ -48,7 +48,7 @@ const FAQ = () => {
     ]
 
     return (
-        <section id="faq" className="py-20 bg-white section-padding">
+        <section id="faq" className="py-20 bg-[#1a1a1a] section-padding">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     ref={ref}
@@ -58,12 +58,12 @@ const FAQ = () => {
                     className="text-center mb-16"
                 >
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-light-green/10 mb-6">
-                        <HelpCircle className="w-8 h-8 text-dark-green" />
+                        <HelpCircle className="w-8 h-8 text-light-green" />
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-dark-green mb-6">
+                    <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-light-green mb-6">
                         Perguntas Frequentes
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         Tire suas principais dúvidas sobre nossos serviços jurídicos especializados em direito do agronegócio
                     </p>
                 </motion.div>
@@ -78,14 +78,14 @@ const FAQ = () => {
                             <AccordionItem
                                 key={index}
                                 value={`item-${index}`}
-                                className="border border-gray-200 rounded-lg px-6 py-2 bg-white hover:shadow-lg transition-all duration-300"
+                                className="border border-gray-700 rounded-lg px-6 py-2 bg-[#252525] hover:shadow-lg transition-all duration-300"
                             >
                                 <AccordionTrigger className="text-left hover:no-underline">
-                                    <span className="text-lg font-semibold text-dark-green pr-4">
+                                    <span className="text-lg font-semibold text-light-green pr-4">
                                         {faq.question}
                                     </span>
                                 </AccordionTrigger>
-                                <AccordionContent className="text-gray-700 leading-relaxed pt-2 pb-4">
+                                <AccordionContent className="text-gray-300 leading-relaxed pt-2 pb-4">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>
@@ -99,7 +99,7 @@ const FAQ = () => {
                     transition={{duration: 0.8, delay: 0.4}}
                     className="mt-12 text-center"
                 >
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-300 mb-6">
                         Não encontrou a resposta que procurava?
                     </p>
                     <a
