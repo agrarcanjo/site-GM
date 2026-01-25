@@ -7,9 +7,20 @@ import {ArrowDown, Phone} from 'lucide-react'
 
 const Hero = () => {
     const [mounted, setMounted] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
         setMounted(true)
+        
+        // Detectar se é dispositivo móvel
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        
+        return () => window.removeEventListener('resize', checkMobile)
     }, [])
 
     const scrollToContact = () => {
@@ -31,16 +42,16 @@ const Hero = () => {
                             playsInline
                             className="absolute inset-0 w-full h-full object-cover"
                         >
-                            <source src="/background-video.mp4" type="video/mp4"/>
+                            <source src={isMobile ? "/background-video-small.mp4" : "/background-video.mp4"} type="video/mp4"/>
                         </video>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-r from-dark-green/80 to-transparent"></div>
                 </div>
             </div>
 
-            <div className="relative z-10 w-full min-h-screen flex items-center lg:pt-24">
+            <div className="relative z-10 w-full min-h-screen flex items-center pt-32 sm:pt-28 lg:pt-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="grid lg:grid-cols-2 gap-32 items-end w-full py-20 lg:py-12">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-32 items-end w-full py-8 lg:py-12">
                         <motion.div
                             initial={{opacity: 0, x: -50}}
                             animate={{opacity: 1, x: 0}}
