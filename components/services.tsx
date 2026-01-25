@@ -27,6 +27,46 @@ const Services = () => {
 
     if (!mounted) return null
 
+    // const services = [
+    //     {
+    //         icon: DollarSign,
+    //         title: 'Crédito Rural e Endividamento',
+    //         description: 'Consultoria estratégica em operações de financiamento, renegociação e alongamento de dívidas de crédito rural.',
+    //         features: ['Alongamento de dívidas', 'Defesa em execuções', 'Acordos estratégicos', 'Preservação do patrimônio']
+    //     },
+    //     {
+    //         icon: Shield,
+    //         title: 'Propriedade Intelectual e Inovação no Agronegócio',
+    //         description: 'Proteção do produtor, assegurando competitividade e segurança jurídica em projetos de inovação e proteção.',
+    //         features: ['Proteção de marcas', 'Proteção de cultivares', 'Tecnologias aplicadas ao campo', 'Inovação assegurada']
+    //     },
+    //     {
+    //         icon: Scale,
+    //         title: 'Gestão Ambiental e Sustentabilidade',
+    //         description: 'Conformidade com o Código Florestal e defesa em processos administrativos ambientais e compliance.',
+    //         features: ['Assessoria em licenciamentos', 'Responsabilidade socioambiental', 'Produção em conformidade', 'Licenciamento ambiental']
+    //     },
+    //     {
+    //         icon: Users,
+    //         title: 'Planejamento Sucessório e Societário',
+    //         description: 'Estruturação de holdings rurais e protocolos familiares para garantir uma sucessão organizada.',
+    //         features: ['Redução de conflitos', 'Preservação do patrimônio', 'Longo prazo', 'Proteção das gerações']
+    //     },
+    //     {
+    //         icon: FileText,
+    //         title: 'Direito Agrário e Imobiliário',
+    //         description: 'Gestão de conflitos possessórios e estruturação de contratos de arrendamento e parceria.',
+    //         features: ['Regularização de propriedades', 'Foco em segurança documental ', 'Estabilidade da atividade rural', 'Due diligence']
+    //     },
+    //     {
+    //         icon: TrendingUp,
+    //         title: 'Contratos do Agronegócio',
+    //         description: 'Elaboração e revisão de contratos específicos do setor agrícola e agropecuário.',
+    //         features: ['Arrendamento rural', 'Parcerias agrícolas', 'Contratos de barter', 'Supply agreements']
+    //     }
+    // ]
+
+
     const services = [
         {
             icon: DollarSign,
