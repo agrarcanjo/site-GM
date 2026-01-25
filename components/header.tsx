@@ -29,7 +29,7 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-24">
                     <div className="flex items-center" id='logo-with-name'>
-                        <div className="relative w-40 h-20 sm:w-52 sm:h-24 lg:w-64 lg:h-28">
+                        <div className="relative w-40 h-20 sm:w-52 sm:h-24 lg:w-64 lg:h-28 cursor-pointer">
                             <Image
                                 src="/main-logo.png"
                                 alt="Glória Menezes Advocacia"
