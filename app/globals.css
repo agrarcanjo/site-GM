@@ -9,6 +9,7 @@
   --brown: #82502B;
   --dark-green: #35422B;
   --light-green: #A6B994;
+  --light-beige: #f4e6b9;
   --background: #FFFFFF;
   --foreground: #000000;
 }
@@ -44,6 +45,10 @@ body {
 
 .text-light-green {
   color: var(--light-green);
+}
+
+.text-light-beige {
+  color: var(--light-beige);
 }
 
 .bg-brown {

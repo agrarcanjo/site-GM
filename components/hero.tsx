@@ -19,10 +19,6 @@ const Hero = () => {
         }
     }
 
-    const openWhatsApp = () => {
-        window.open('https://wa.me/5562982144754?text=Olá, gostaria de saber mais sobre seus serviços de advocacia em crédito rural.', '_blank')
-    }
-
     return (
         <section id="inicio" className="relative min-h-screen overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -51,20 +47,11 @@ const Hero = () => {
                             transition={{duration: 0.8}}
                             className="text-white pb-8 lg:pb-56"
                         >
-                            <motion.h1
-                                initial={{opacity: 0, y: 30}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{duration: 0.8, delay: 0.2}}
-                                className="text-5xl lg:text-6xl font-playfair font-bold mb-6"
-                            >
-                                <span className="text-light-green">Glória Menezes</span>
-                            </motion.h1>
-
                             <motion.p
                                 initial={{opacity: 0, y: 30}}
                                 animate={{opacity: 1, y: 0}}
                                 transition={{duration: 0.8, delay: 0.4}}
-                                className="text-xl lg:text-2xl mb-4 text-gray-100 text-justify"
+                                className="text-xl lg:text-2xl mb-4 text-gray-100  font-bold"
                             >
                                 Estratégia jurídica para superar o endividamento e proteger o seu legado no campo
                             </motion.p>
@@ -87,14 +74,6 @@ const Hero = () => {
                                 className="flex flex-col sm:flex-row gap-4"
                             >
                                 <button
-                                    onClick={openWhatsApp}
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] text-white font-semibold rounded-lg hover:bg-[#20BA5A] transition-all duration-300 hover:scale-105 shadow-lg"
-                                >
-                                    <MessageSquare size={20} className="mr-2"/>
-                                    WhatsApp
-                                </button>
-
-                                <button
                                     onClick={scrollToContact}
                                     className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-dark-green transition-all duration-300 hover:scale-105"
                                 >
@@ -108,9 +87,9 @@ const Hero = () => {
                             initial={{opacity: 0, x: 50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8, delay: 0.4}}
-                            className="relative hidden lg:flex justify-end items-end"
+                            className="relative hidden lg:flex justify-end items-end h-[calc(100vh+3rem)]"
                         >
-                            <div className="relative w-full max-h-[calc(100vh-160px)] flex items-end justify-end" style={{marginBottom: '10px'}}>
+                            <div className="relative w-full h-full" style={{marginBottom: '10px'}}>
                                 <Image
                                     src="/lawyer-photo-main.png"
                                     alt="Dra. Glória Menezes"

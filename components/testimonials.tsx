@@ -12,38 +12,38 @@ const Testimonials = () => {
 
     const testimonials = [
         {
-            name: 'Carlos Eduardo Silva',
-            role: 'Produtor de Soja - MT',
-            content: 'A Dra. Glória foi fundamental na estruturação da nossa CPR de R$ 5 milhões. Sua expertise em crédito rural nos garantiu as melhores condições do mercado e total segurança jurídica na operação.',
+            name: 'André Aidar',
+            role: 'Doutor em Agronegócio e Professor de Direito da PUC/GO',
+            content: 'Dra. Glória Menezes foi uma aluna brilhante na Faculdade de Direito e não me  surpreende a grande profissional que ela se tornou, sendo uma das maiores especialistas em crédito rural da nossa região. Tenho imensa segurança e tranquilidade em trabalhar ao lado dela na defesa dos produtores rurais.',
             rating: 5
         },
         {
-            name: 'Ana Beatriz Santos',
-            role: 'Diretora Financeira - Cooperativa Agrícola',
-            content: 'Excelente trabalho na renegociação das nossas dívidas rurais. Conseguimos um alongamento de R$ 2,3 milhões com condições muito favoráveis. Profissional extremamente competente e dedicada.',
-            rating: 5
-        },
-        {
-            name: 'João Pedro Oliveira',
-            role: 'Empresário do Agronegócio - GO',
-            content: 'Após anos de problemas com execuções fiscais, a Dra. Glória conseguiu reverter nossa situação através de uma estratégia jurídica brilhante. Salvou nossa empresa e nossa família.',
+            name: 'Alex Miller',
+            role: 'CEO Academia de Negócios Agro',
+            content: 'Quando o assunto envolve o agro, o crédito rural e judiciário, a Glória é, para mim uma referência! Hoje, não basta apenas conhecimento teórico, a prática faz toda a diferença e esse é o diferencial dela.',
             rating: 5
         },
         {
             name: 'Fazenda Santa Rita Ltda.',
             role: 'Grupo Agropecuário - RS',
+            content: 'A Doutora Glória Menezes é uma profissional de sólida bagagem no setor bancário, aplicando seu conhecimento com precisão e estratégia ao agronegócio. Sua atuação técnica demonstra visão prática e segurança jurídica que traz soluções consistentes e bem estruturadas.',
+            rating: 5
+        },
+        {
+            name: 'Frederico',
+            role: 'Conselheiro da OAB, Doutor em Direito Agrário',
             content: 'Contratamos os serviços para estruturação de contratos de parceria agrícola. O trabalho foi impecável, com atenção a todos os detalhes legais e comerciais. Recomendamos sem reservas.',
             rating: 5
         },
         {
-            name: 'Roberto Fernandes',
-            role: 'Produtor Rural - PR',
+            name: 'Daniella',
+            role: 'Advogada especialista em crédito rural',
             content: 'A Dra. Glória nos orientou na recuperação judicial da fazenda. Graças ao seu trabalho, conseguimos manter nossa propriedade e reorganizar as finanças. Gratidão eterna!',
             rating: 5
         },
         {
-            name: 'Cooperativa Vale Verde',
-            role: 'Cooperativa Agropecuária - MG',
+            name: 'Luciana Bernardes',
+            role: 'Superintendente de Crédito em instituição financeira',
             content: 'Assessoria completa em compliance e governança corporativa. Trabalho de altíssima qualidade que elevou o padrão da nossa gestão jurídica. Parceria de longo prazo garantida.',
             rating: 5
         }
@@ -63,7 +63,7 @@ const Testimonials = () => {
                         Depoimentos
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        O reconhecimento dos nossos clientes é a nossa maior conquista
+                        O depoimento de nossos parceiros é nossa maior conquista
                     </p>
                 </motion.div>
 
