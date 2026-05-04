@@ -21,7 +21,7 @@ const About = () => {
 
     const stats = [
         {icon: DollarSign, number: '+ R$ 3 bi', label: 'em crédito rural administrado'},
-        {icon: Clock, number: '+ 7 anos', label: 'atuando em instituição financeira'},
+        {icon: Clock, number: '+8 anos', label: ' em instituição financeira'},
         {icon: FileCheck, number: 'FBB420', label: 'Certificação Crédito Rural'},
         {icon: GraduationCap, number: 'Especialização', label: 'Direito Agrário e Agronegócio'},
     ]
@@ -53,29 +53,10 @@ const About = () => {
 
                         <div className="space-y-4 text-gray-300 leading-relaxed text-justify">
                             <p>
-                                Advogada com sólida vivência no mercado financeiro, com mais de sete anos de <strong>experiência
-                                no setor bancário</strong>, onde desenvolveu expertise em análise e gestão de <strong>Crédito
-                                Rural</strong>. Com atuação destacada na administração de mais de <strong>R$ 3
-                                bilhões em recursos</strong> e definição de taxas de juros, possui <strong>domínio dos
-                                fluxos internos das instituições financeiras</strong>, garantindo um <strong>diferencial
-                                estratégico</strong> ao identificar soluções precisas para as demandas de produtores
-                                rurais junto ao sistema bancário e demais financiadoras.
+                                Advogada com atuação no Direito do Agronegócio e mais de 8 anos de experiência no setor bancário, com vivência prática em análise e gestão de crédito rural. Sua atuação reúne conhecimento jurídico e compreensão das instituições financeiras, com foco em renegociação de dívidas, contratos, regularização de propriedades e proteção patrimonial no campo.
                             </p>
 
-                            <p>
-                                Graduada em Direito pela Pontifícia Universidade Católica de Goiás (PUC-GO) é
-                                pós-graduanda em Direito Agrário e do Agronegócio e possui a certificação FBB420
-                                (Crédito Rural) pela Febraban. Sua atuação une o conhecimento prático e técnico das
-                                normas bancárias à especialização em Direito do Agronegócio, entregando soluções seguras
-                                para a renegociação de dívidas, regularização de propriedades e proteção do patrimônio
-                                no campo.
-                            </p>
-
-                            <p>
-                                Sua atuação une o conhecimento prático e técnico das normas bancárias à especialização
-                                em Direito Agrário, entregando soluções seguras para a renegociação de dívidas,
-                                regularização de propriedades e proteção do patrimônio no campo.
-                            </p>
+                        
                         </div>
                     </motion.div>
 
@@ -87,7 +68,7 @@ const About = () => {
                     >
                         <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-xl">
                             <Image
-                                src="/lawyer-photo.jpg"
+                                src="/lawyer-2.jpg"
                                 alt="Dra. Glória Menezes"
                                 fill
                                 className="object-cover"

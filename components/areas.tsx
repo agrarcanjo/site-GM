@@ -8,7 +8,10 @@ import {
     FileCheck,
     Leaf,
     Building2,
-    Lightbulb
+    Lightbulb,
+    Briefcase,
+    Users,
+    Calculator
 } from 'lucide-react'
 
 const Areas = () => {
@@ -51,6 +54,24 @@ const Areas = () => {
             icon: Lightbulb,
             title: 'Propriedade Intelectual e Inovação no Agronegócio',
             description: 'Proteção de cultivares, marcas e tecnologias aplicadas ao campo, assegurando competitividade e segurança jurídica em projetos de inovação.',
+            details: []
+        },
+        {
+            icon: Briefcase,
+            title: 'Direito do Trabalho no Agronegócio',
+            description: 'Atuação em questões relacionadas ao trabalho rural, contratação, obrigações do empregador rural, passivos trabalhistas, segurança e saúde no trabalho no campo e demandas decorrentes da legislação trabalhista aplicável ao setor.',
+            details: []
+        },
+        {
+            icon: Users,
+            title: 'Direito Previdenciário Rural',
+            description: 'Atuação em questões previdenciárias ligadas ao meio rural, com foco em enquadramento e documentação do segurado especial, contribuições, aposentadoria rural, pensão por morte e rotinas relacionadas ao eSocial do produtor rural e do segurado especial.',
+            details: []
+        },
+        {
+            icon: Calculator,
+            title: 'Direito Tributário do Agronegócio',
+            description: 'Suporte jurídico em questões tributárias ligadas à atividade rural, com foco em tributos sobre a operação, tributação sobre imóveis rurais, ITR, regularidade fiscal e organização patrimonial do produtor.',
             details: []
         }
     ]

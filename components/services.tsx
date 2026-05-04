@@ -7,11 +7,11 @@ import {
     FileText,
     DollarSign,
     Shield,
-    Users,
     Scale,
     TrendingUp,
     CheckCircle,
-    ArrowRight
+    ArrowRight,
+    Home
 } from 'lucide-react'
 
 const Services = () => {
@@ -70,39 +70,39 @@ const Services = () => {
     const services = [
         {
             icon: DollarSign,
-            title: 'Negociação de Dívidas Rurais',
-            description: 'Renegociação e alongamento de dívidas de crédito rural, defesa em execuções e acordos estratégicos.',
-            features: ['Alongamento de dívidas', 'Defesa em execuções', 'Acordos judiciais', 'Prorrogação compulsória']
-        },
-        {
-            icon: FileText,
-            title: 'CPR e Operações de Crédito',
-            description: 'Estruturação de CPRs físicas, financeiras e verdes, além de outras modalidades de crédito rural.',
-            features: ['CPR Física e Financeira', 'CPR Verde', 'Contratos de financiamento', 'Due diligence']
-        },
-        {
-            icon: Shield,
-            title: 'Garantias e Alienação Fiduciária',
-            description: 'Constituição, acompanhamento e defesa em questões envolvendo garantias rurais.',
-            features: ['Alienação fiduciária', 'Penhor rural', 'Hipoteca cedular', 'Consolidação patrimonial']
-        },
-        {
-            icon: Users,
-            title: 'Assessoria a Cooperativas',
-            description: 'Consultoria jurídica especializada para cooperativas agropecuárias e seus associados.',
-            features: ['Contratos cooperativos', 'Governança corporativa', 'Compliance', 'Resolução de conflitos']
+            title: 'Renegociação de Dívidas Rurais',
+            description: 'Atuação jurídica voltada à renegociação, prorrogação e reestruturação de passivos no agronegócio.',
+            features: ['Alongamento de dívidas', 'Prorrogação compulsória', 'Acordos estratégicos', 'Reestruturação de passivos']
         },
         {
             icon: Scale,
-            title: 'Recuperação Judicial Rural',
-            description: 'Acompanhamento completo em processos de recuperação judicial para produtores rurais.',
-            features: ['Plano de recuperação', 'Assembleia de credores', 'Cumprimento do plano', 'Levantamento patrimonial']
+            title: 'Defesa em Execuções e Cobranças',
+            description: 'Atuação em execuções judiciais e cobranças relacionadas ao inadimplemento de operações rurais.',
+            features: ['Defesa em execuções', 'Cobrança judicial e extrajudicial', 'Estratégia processual', 'Medidas de contenção patrimonial']
         },
         {
             icon: TrendingUp,
-            title: 'Contratos do Agronegócio',
+            title: 'Crédito Rural e Desclassificação de Operações',
+            description: 'Atuação jurídica em operações de crédito rural, com análise técnica de enquadramento, contratos, exigências e medidas voltadas à reversão de desclassificação de operações rurais.',
+            features: ['Estruturação de operações de crédito rural', 'Análise contratual e documental', 'Reversão de desclassificação', 'Medidas estratégicas junto ao banco']
+        },
+        {
+            icon: Shield,
+            title: 'Garantias Rurais e Alienação Fiduciária',
+            description: 'Constituição, acompanhamento e defesa em questões envolvendo garantias rurais no agronegócio.',
+            features: ['Alienação fiduciária', 'Penhor rural', 'Hipoteca cedular', 'Análise e defesa de garantias']
+        },
+        {
+            icon: FileText,
+            title: 'Contratos Agrários e Contratos do Agro',
             description: 'Elaboração e revisão de contratos específicos do setor agrícola e agropecuário.',
-            features: ['Arrendamento rural', 'Parcerias agrícolas', 'Contratos de barter', 'Supply agreements']
+            features: ['Arrendamento e parceria rural', 'Comodato', 'Fornecimento de insumos', 'Compra e venda de commodities']
+        },
+        {
+            icon: Home,
+            title: 'Regularização de Imóveis e Patrimônio Rural',
+            description: 'Regularização documental e patrimonial de imóveis rurais para segurança jurídica da atividade.',
+            features: ['Regularização documental', 'CCIR, CAR e ITR', 'Matrícula e georreferenciamento', 'Aquisição e alienação de imóveis rurais']
         }
     ]
 

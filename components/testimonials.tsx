@@ -30,9 +30,9 @@ const Testimonials = () => {
             rating: 5
         },
         {
-            name: 'Frederico',
+            name: 'Dr. Frederico Alves',
             role: 'Conselheiro da OAB, Doutor em Direito Agrário',
-            content: 'Contratamos os serviços para estruturação de contratos de parceria agrícola. O trabalho foi impecável, com atenção a todos os detalhes legais e comerciais. Recomendamos sem reservas.',
+            content: 'Gloria, aluna e colega advogada, dedicada ao produtor rural. Se destaca pela grande experiência em créditos rurais.',
             rating: 5
         },
         {
