@@ -5,9 +5,11 @@ import Image from 'next/image'
 import {motion} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 import {Clock, DollarSign, FileCheck, GraduationCap} from 'lucide-react'
+import {Carousel, CarouselContent, CarouselItem, type CarouselApi} from '@/components/ui/carousel'
 
 const About = () => {
     const [mounted, setMounted] = useState(false)
+    const [api, setApi] = useState<CarouselApi>()
     const {ref, inView} = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -17,7 +19,26 @@ const About = () => {
         setMounted(true)
     }, [])
 
+    // Autoplay do carrossel
+    useEffect(() => {
+        if (!api) {
+            return
+        }
+
+        const autoplay = setInterval(() => {
+            api.scrollNext()
+        }, 4000) // Troca de imagem a cada 4 segundos
+
+        return () => clearInterval(autoplay)
+    }, [api])
+
     if (!mounted) return null
+
+    const images = [
+        { src: '/lawyer-1.jpg', alt: 'Dra. Glória Menezes - Foto 1' },
+        { src: '/lawyer-2.png', alt: 'Dra. Glória Menezes - Foto 2' },
+        { src: '/lawyer-3.jpg', alt: 'Dra. Glória Menezes - Foto 3' },
+    ]
 
     const stats = [
         {icon: DollarSign, number: '+ R$ 3 bi', label: 'em crédito rural administrado'},
@@ -66,14 +87,29 @@ const About = () => {
                         transition={{duration: 0.8, delay: 0.4}}
                         className="relative"
                     >
-                        <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-xl">
-                            <Image
-                                src="/lawyer-2.jpg"
-                                alt="Dra. Glória Menezes"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+                        <Carousel 
+                            setApi={setApi}
+                            opts={{
+                                align: 'start',
+                                loop: true,
+                            }}
+                            className="w-full"
+                        >
+                            <CarouselContent>
+                                {images.map((image, index) => (
+                                    <CarouselItem key={index}>
+                                        <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-xl">
+                                            <Image
+                                                src={image.src}
+                                                alt={image.alt}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                        </Carousel>
                     </motion.div>
                 </div>
 
