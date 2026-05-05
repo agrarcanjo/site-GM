@@ -7,9 +7,20 @@ import {ArrowDown, Phone} from 'lucide-react'
 
 const Hero = () => {
     const [mounted, setMounted] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
         setMounted(true)
+
+        // Detectar se é dispositivo móvel
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+
+        return () => window.removeEventListener('resize', checkMobile)
     }, [])
 
     const scrollToContact = () => {
@@ -21,17 +32,21 @@ const Hero = () => {
 
     return (
         <section id="inicio" className="relative min-h-screen overflow-hidden">
-            <div className="absolute inset-x-0 top-24 bottom-0 z-0">
+            <div className="absolute inset-0 z-0">
                 <div className="relative w-full h-full">
                     {mounted && (
-                        <Image
-                            src="/background.png"
-                            alt="Background"
-                            fill
-                            className="object-cover"
-                            priority
-                            quality={100}
-                        />
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="metadata"
+                            poster="/background-poster.jpg"
+                            className="absolute inset-0 w-full h-full object-cover"
+                        >
+                            <source src={isMobile ? "/background-video-small.webm" : "/background-video.webm"} type="video/webm"/>
+                            <source src={isMobile ? "/background-video-small.mp4" : "/background-video.mp4"} type="video/mp4"/>
+                        </video>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-r from-dark-green/80 to-transparent"></div>
                 </div>
@@ -39,12 +54,12 @@ const Hero = () => {
 
             <div className="relative z-10 w-full min-h-screen flex items-center pt-32 sm:pt-28 lg:pt-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div className="w-full py-8 lg:py-12">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-32 items-end w-full py-8 lg:py-12">
                         <motion.div
                             initial={{opacity: 0, x: -50}}
                             animate={{opacity: 1, x: 0}}
                             transition={{duration: 0.8}}
-                            className="text-white pb-8 lg:pb-16 max-w-3xl"
+                            className="text-white pb-8 lg:pb-16"
                         >
                             <motion.p
                                 initial={{opacity: 0, y: 30}}
@@ -79,14 +94,48 @@ const Hero = () => {
                                 </button>
                             </motion.div>
                         </motion.div>
+
+                        <motion.div
+                            initial={{opacity: 0, x: 50}}
+                            animate={{opacity: 1, x: 0}}
+                            transition={{duration: 0.8, delay: 0.4}}
+                            className="relative hidden lg:flex justify-end items-end"
+                        >
+                            <div className="relative w-full h-[calc(100vh-180px)] min-h-[500px] max-h-[850px]" style={{marginBottom: '-50px'}}>
+                                <Image
+                                    src="/lawyer_main.png"
+                                    alt="Dra. Glória Menezes"
+                                    fill
+                                    className="object-contain object-bottom"
+                                    priority
+                                    sizes="(max-width: 1024px) 0vw, 50vw"
+                                />
+                            </div>
+                        </motion.div>
                     </div>
+
+                    <motion.div
+                        initial={{opacity: 0, scale: 0.8}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 0.8, delay: 0.6}}
+                        className="lg:hidden relative w-full h-[400px] mt-8 mb-16"
+                    >
+                        <Image
+                            src="/lawyer_main.png"
+                            alt="Dra. Glória Menezes"
+                            fill
+                            className="object-contain object-bottom"
+                            priority
+                            sizes="100vw"
+                        />
+                    </motion.div>
                 </div>
 
                 <motion.div
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1, delay: 1.2}}
-                    className="absolute bottom-2 lg:bottom-4 left-1/2 transform -translate-x-1/2 z-20"
+                    className="hidden lg:block absolute bottom-2 lg:bottom-4 left-1/2 transform -translate-x-1/2 z-20"
                 >
                     <ArrowDown className="w-8 h-8 text-white animate-bounce"/>
                 </motion.div>
