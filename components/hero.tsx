@@ -52,7 +52,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="relative z-10 w-full min-h-screen flex items-center pt-32 sm:pt-28 lg:pt-24">
+            <div className="relative z-10 w-full min-h-screen flex flex-col justify-between pt-32 sm:pt-28 lg:pt-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-32 items-end w-full py-8 lg:py-12">
                         <motion.div
@@ -113,23 +113,23 @@ const Hero = () => {
                             </div>
                         </motion.div>
                     </div>
-
-                    <motion.div
-                        initial={{opacity: 0, scale: 0.8}}
-                        animate={{opacity: 1, scale: 1}}
-                        transition={{duration: 0.8, delay: 0.6}}
-                        className="lg:hidden relative w-full h-[400px] mt-8 mb-16"
-                    >
-                        <Image
-                            src="/lawyer_main.png"
-                            alt="Dra. Glória Menezes"
-                            fill
-                            className="object-contain object-bottom"
-                            priority
-                            sizes="100vw"
-                        />
-                    </motion.div>
                 </div>
+
+                <motion.div
+                    initial={{opacity: 0, scale: 0.8}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.8, delay: 0.6}}
+                    className="lg:hidden relative w-full h-[50vh] min-h-[300px]"
+                >
+                    <Image
+                        src="/lawyer_main.png"
+                        alt="Dra. Glória Menezes"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                        sizes="100vw"
+                    />
+                </motion.div>
 
                 <motion.div
                     initial={{opacity: 0}}

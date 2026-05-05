@@ -133,9 +133,10 @@ const Services = () => {
                             transition={{duration: 0.8, delay: index * 0.1}}
                             className="card-hover bg-gray-50 p-8 rounded-xl border border-gray-100"
                         >
-                            <div
-                                className="inline-flex items-center justify-center w-16 h-16 bg-brown/10 rounded-full mb-6">
-                                <service.icon className="w-8 h-8 text-brown"/>
+                            <div className="flex justify-center mb-6">
+                                <div className="flex items-center justify-center w-16 h-16 bg-brown/10 rounded-full">
+                                    <service.icon className="w-8 h-8 text-brown"/>
+                                </div>
                             </div>
 
                             <h3 className="text-xl font-bold text-dark-green mb-4">
