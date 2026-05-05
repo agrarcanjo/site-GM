@@ -41,17 +41,32 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#areas" className="hover:text-light-green transition-colors">
-                  Gestão Ambiental
+                  Gestão Ambiental e Sustentabilidade
                 </a>
               </li>
               <li>
                 <a href="#areas" className="hover:text-light-green transition-colors">
-                  Planejamento Sucessório
+                  Planejamento Sucessório e Societário
                 </a>
               </li>
               <li>
                 <a href="#areas" className="hover:text-light-green transition-colors">
-                  Propriedade Intelectual
+                  Propriedade Intelectual e Inovação
+                </a>
+              </li>
+              <li>
+                <a href="#areas" className="hover:text-light-green transition-colors">
+                  Direito do Trabalho no Agronegócio
+                </a>
+              </li>
+              <li>
+                <a href="#areas" className="hover:text-light-green transition-colors">
+                  Direito Previdenciário Rural
+                </a>
+              </li>
+              <li>
+                <a href="#areas" className="hover:text-light-green transition-colors">
+                  Direito Tributário do Agronegócio
                 </a>
               </li>
             </ul>

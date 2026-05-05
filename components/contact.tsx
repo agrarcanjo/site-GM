@@ -41,19 +41,33 @@ const Contact = () => {
         setIsSubmitting(true)
 
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+            // Formatar mensagem para WhatsApp
+            const whatsappMessage = `
+*Nova Consulta Jurídica*
+
+👤 *Nome:* ${formData.name}
+📧 *Email:* ${formData.email}
+📱 *Telefone:* ${formData.phone}
+📋 *Assunto:* ${formData.subject}
+
+📝 *Mensagem:*
+${formData.message}
+            `.trim()
+
+            // Codificar a mensagem para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage)
+            
+            // Abrir WhatsApp com a mensagem pré-preenchida
+            window.open(`https://wa.me/5562982144754?text=${encodedMessage}`, '_blank')
+
+            // Mostrar feedback de sucesso
+            toast({
+                title: "Redirecionando para o WhatsApp!",
+                description: "Você será direcionado para continuar a conversa no WhatsApp.",
             })
 
-            if (response.ok) {
-                toast({
-                    title: "Mensagem enviada com sucesso!",
-                    description: "Entraremos em contato em breve.",
-                })
+            // Limpar formulário após 1 segundo
+            setTimeout(() => {
                 setFormData({
                     name: '',
                     email: '',
@@ -61,16 +75,15 @@ const Contact = () => {
                     subject: '',
                     message: ''
                 })
-            } else {
-                throw new Error('Erro ao enviar mensagem')
-            }
+                setIsSubmitting(false)
+            }, 1000)
+
         } catch (error) {
             toast({
-                title: "Erro ao enviar mensagem",
-                description: "Tente novamente ou entre em contato pelo WhatsApp.",
+                title: "Erro ao processar",
+                description: "Tente novamente ou clique no botão WhatsApp abaixo.",
                 variant: "destructive",
             })
-        } finally {
             setIsSubmitting(false)
         }
     }
@@ -107,7 +120,10 @@ const Contact = () => {
         'Direito Agrário e Imobiliário',
         'Gestão Ambiental e Sustentabilidade',
         'Planejamento Sucessório e Societário',
-        'Propriedade Intelectual e Inovação',
+        'Propriedade Intelectual e Inovação no Agronegócio',
+        'Direito do Trabalho no Agronegócio',
+        'Direito Previdenciário Rural',
+        'Direito Tributário do Agronegócio',
         'Outro assunto'
     ]
 
@@ -284,21 +300,26 @@ const Contact = () => {
                                 />
                             </div>
 
+                            <div className="flex items-center gap-2 text-sm text-gray-600 bg-green-50 p-3 rounded-lg border border-green-200">
+                                <MessageSquare size={16} className="text-green-600 flex-shrink-0"/>
+                                <p>Ao enviar, você será redirecionado para o WhatsApp para continuar a conversa diretamente com a Dra. Glória.</p>
+                            </div>
+
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-brown text-white py-4 px-6 rounded-lg font-semibold hover:bg-brown/90 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full bg-green-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isSubmitting ? (
                                     <>
                                         <div
                                             className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                                        <span>Enviando...</span>
+                                        <span>Abrindo WhatsApp...</span>
                                     </>
                                 ) : (
                                     <>
-                                        <Send size={20}/>
-                                        <span>Enviar Mensagem</span>
+                                        <MessageSquare size={20}/>
+                                        <span>Enviar via WhatsApp</span>
                                     </>
                                 )}
                             </button>
