@@ -183,7 +183,7 @@ const Services = () => {
                         Precisa de assessoria jurídica especializada?
                     </h3>
                     <p className="text-lg mb-6 opacity-90">
-                        Entre em contato e descubra como podemos ajudar seu negócio no agronegócio
+                        Entre em contato e descubra como podemos resolver o seu caso
                     </p>
                     <button
                         onClick={() => {
