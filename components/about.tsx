@@ -51,9 +51,12 @@ const About = () => {
     if (!mounted) return null
 
     const images = [
+        { src: '/lawyer-0.jpeg', alt: 'Dra. Glória Menezes - Foto 0' },
         { src: '/lawyer-1.jpg', alt: 'Dra. Glória Menezes - Foto 1' },
         { src: '/lawyer-2.png', alt: 'Dra. Glória Menezes - Foto 2' },
         { src: '/lawyer-3.jpg', alt: 'Dra. Glória Menezes - Foto 3' },
+        { src: '/lawyer-4.png', alt: 'Dra. Glória Menezes - Foto 4' },
+        { src: '/lawyer-5.png', alt: 'Dra. Glória Menezes - Foto 5' },
     ]
 
     const stats = [
