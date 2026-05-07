@@ -4,12 +4,14 @@ import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import {motion} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
-import {Clock, DollarSign, FileCheck, GraduationCap} from 'lucide-react'
+import {Clock, DollarSign, FileCheck, GraduationCap, ChevronLeft, ChevronRight} from 'lucide-react'
 import {Carousel, CarouselContent, CarouselItem, type CarouselApi} from '@/components/ui/carousel'
 
 const About = () => {
     const [mounted, setMounted] = useState(false)
     const [api, setApi] = useState<CarouselApi>()
+    const [current, setCurrent] = useState(0)
+    const [count, setCount] = useState(0)
     const {ref, inView} = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -18,6 +20,20 @@ const About = () => {
     useEffect(() => {
         setMounted(true)
     }, [])
+
+    // Monitorar mudanças no slide atual
+    useEffect(() => {
+        if (!api) {
+            return
+        }
+
+        setCount(api.scrollSnapList().length)
+        setCurrent(api.selectedScrollSnap())
+
+        api.on('select', () => {
+            setCurrent(api.selectedScrollSnap())
+        })
+    }, [api])
 
     // Autoplay do carrossel
     useEffect(() => {
@@ -87,29 +103,64 @@ const About = () => {
                         transition={{duration: 0.8, delay: 0.4}}
                         className="relative"
                     >
-                        <Carousel 
-                            setApi={setApi}
-                            opts={{
-                                align: 'start',
-                                loop: true,
-                            }}
-                            className="w-full"
-                        >
-                            <CarouselContent>
-                                {images.map((image, index) => (
-                                    <CarouselItem key={index}>
-                                        <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-xl">
-                                            <Image
-                                                src={image.src}
-                                                alt={image.alt}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                    </CarouselItem>
+                        <div className="relative group">
+                            <Carousel 
+                                setApi={setApi}
+                                opts={{
+                                    align: 'start',
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent>
+                                    {images.map((image, index) => (
+                                        <CarouselItem key={index}>
+                                            <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-xl">
+                                                <Image
+                                                    src={image.src}
+                                                    alt={image.alt}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                            </Carousel>
+
+                            {/* Botões de navegação - estilo Instagram */}
+                            <button
+                                onClick={() => api?.scrollPrev()}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"
+                                aria-label="Foto anterior"
+                            >
+                                <ChevronLeft className="w-6 h-6 text-gray-800" />
+                            </button>
+
+                            <button
+                                onClick={() => api?.scrollNext()}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"
+                                aria-label="Próxima foto"
+                            >
+                                <ChevronRight className="w-6 h-6 text-gray-800" />
+                            </button>
+
+                            {/* Indicadores - estilo Instagram */}
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                {images.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => api?.scrollTo(index)}
+                                        className={`transition-all duration-300 rounded-full ${
+                                            index === current 
+                                                ? 'w-8 h-2 bg-white' 
+                                                : 'w-2 h-2 bg-white/50 hover:bg-white/75'
+                                        }`}
+                                        aria-label={`Ir para foto ${index + 1}`}
+                                    />
                                 ))}
-                            </CarouselContent>
-                        </Carousel>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
 
