@@ -79,12 +79,12 @@ const Footer = () => {
                 <Phone size={18} className="text-light-green" />
                 <div>
                   <a 
-                    href="https://wa.me/5562982144754" 
+                    href="https://wa.me/message/L67YIHZ3UVYDJ1" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-light-green transition-colors"
                   >
-                    (62) 98214-4754
+                    (62) 99485-8709
                   </a>
                 </div>
               </div>

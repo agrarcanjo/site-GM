@@ -58,7 +58,7 @@ ${formData.message}
             const encodedMessage = encodeURIComponent(whatsappMessage)
             
             // Abrir WhatsApp com a mensagem pré-preenchida
-            window.open(`https://wa.me/5562982144754?text=${encodedMessage}`, '_blank')
+            window.open(`https://wa.me/5562994858709?text=${encodedMessage}`, '_blank')
 
             // Mostrar feedback de sucesso
             toast({
@@ -92,8 +92,8 @@ ${formData.message}
         {
             icon: Phone,
             title: 'Telefone/WhatsApp',
-            content: '(62) 98214-4754',
-            action: () => window.open('https://wa.me/5562982144754', '_blank')
+            content: '(62) 99485-8709',
+            action: () => window.open('https://wa.me/message/L67YIHZ3UVYDJ1', '_blank')
         },
         {
             icon: Mail,
@@ -200,7 +200,7 @@ ${formData.message}
                                     <Linkedin size={24}/>
                                 </a>
                                 <button
-                                    onClick={() => window.open('https://wa.me/5562982144754', '_blank')}
+                                    onClick={() => window.open('https://wa.me/message/L67YIHZ3UVYDJ1', '_blank')}
                                     className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                                 >
                                     <MessageSquare size={24}/>

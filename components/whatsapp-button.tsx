@@ -27,7 +27,7 @@ const WhatsAppButton = () => {
     const message = encodeURIComponent(
       'Olá! Vim através do site e gostaria de saber mais sobre os serviços de advocacia em crédito rural.'
     )
-    window.open(`https://wa.me/5562982144754?text=${message}`, '_blank')
+    window.open(`https://wa.me/5562994858709?text=${message}`, '_blank')
   }
 
   return (
