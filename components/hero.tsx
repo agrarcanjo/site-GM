@@ -148,38 +148,38 @@ const Hero = () => {
                 </div>
 
                 {/* Imagem Desktop - Posicionada absolutamente no bottom direito */}
-                <motion.div
-                    initial={{opacity: 0, x: 50}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{duration: 0.8, delay: 0.4}}
-                    className="hidden lg:block absolute bottom-0 right-0 w-1/2 h-[calc(100vh-120px)] max-h-[900px]"
-                >
-                    <Image
-                        src="/lawyer_main.png"
-                        alt="Dra. Glória Menezes"
-                        fill
-                        className="object-contain object-bottom"
-                        priority
-                        sizes="50vw"
-                    />
-                </motion.div>
+                {/*<motion.div*/}
+                {/*    initial={{opacity: 0, x: 50}}*/}
+                {/*    animate={{opacity: 1, x: 0}}*/}
+                {/*    transition={{duration: 0.8, delay: 0.4}}*/}
+                {/*    className="hidden lg:block absolute bottom-0 right-0 w-1/2 h-[calc(100vh-120px)] max-h-[900px]"*/}
+                {/*>*/}
+                {/*    <Image*/}
+                {/*        src="/lawyer_main.png"*/}
+                {/*        alt="Dra. Glória Menezes"*/}
+                {/*        fill*/}
+                {/*        className="object-contain object-bottom"*/}
+                {/*        priority*/}
+                {/*        sizes="50vw"*/}
+                {/*    />*/}
+                {/*</motion.div>*/}
 
                 {/* Imagem Mobile - Posicionada absolutamente no bottom */}
-                <motion.div
-                    initial={{opacity: 0, scale: 0.8}}
-                    animate={{opacity: 1, scale: 1}}
-                    transition={{duration: 0.8, delay: 0.6}}
-                    className="lg:hidden absolute bottom-0 left-0 right-0 h-[50vh] min-h-[300px]"
-                >
-                    <Image
-                        src="/lawyer_main.png"
-                        alt="Dra. Glória Menezes"
-                        fill
-                        className="object-contain object-bottom"
-                        priority
-                        sizes="100vw"
-                    />
-                </motion.div>
+                {/*<motion.div*/}
+                {/*    initial={{opacity: 0, scale: 0.8}}*/}
+                {/*    animate={{opacity: 1, scale: 1}}*/}
+                {/*    transition={{duration: 0.8, delay: 0.6}}*/}
+                {/*    className="lg:hidden absolute bottom-0 left-0 right-0 h-[50vh] min-h-[300px]"*/}
+                {/*>*/}
+                {/*    <Image*/}
+                {/*        src="/lawyer_main.png"*/}
+                {/*        alt="Dra. Glória Menezes"*/}
+                {/*        fill*/}
+                {/*        className="object-contain object-bottom"*/}
+                {/*        priority*/}
+                {/*        sizes="100vw"*/}
+                {/*    />*/}
+                {/*</motion.div>*/}
 
                 {/* Arrow - Posicionada absolutamente no bottom */}
                 <motion.div

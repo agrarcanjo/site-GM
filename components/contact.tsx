@@ -141,9 +141,9 @@ ${formData.message}
                         Entre em Contato
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto italic">
-                        "Nossa atuação une o rigor do Direito Agrário à expertise operacional do Crédito Rural,
+                        Nossa atuação une o rigor do Direito Agrário à expertise operacional do Crédito Rural,
                         entregando soluções que se alinham à realidade das instituições financeiras e atendem às
-                        necessidades do produtor."
+                        necessidades do produtor.
                     </p>
                 </motion.div>
 

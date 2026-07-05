@@ -51,12 +51,11 @@ const About = () => {
     if (!mounted) return null
 
     const images = [
-        { src: '/lawyer-0.jpeg', alt: 'Dra. Glória Menezes - Foto 0' },
         { src: '/lawyer-1.jpg', alt: 'Dra. Glória Menezes - Foto 1' },
         { src: '/lawyer-2.png', alt: 'Dra. Glória Menezes - Foto 2' },
-        { src: '/lawyer-3.jpg', alt: 'Dra. Glória Menezes - Foto 3' },
-        { src: '/lawyer-4.png', alt: 'Dra. Glória Menezes - Foto 4' },
-        { src: '/lawyer-5.png', alt: 'Dra. Glória Menezes - Foto 5' },
+        { src: '/lawyer-3.png', alt: 'Dra. Glória Menezes - Foto 3' },
+        { src: '/lawyer-4.jpeg', alt: 'Dra. Glória Menezes - Foto 4' },
+        { src: '/lawyer-5.jpeg', alt: 'Dra. Glória Menezes - Foto 5' },
     ]
 
     const stats = [
@@ -77,7 +76,7 @@ const About = () => {
                     className="text-center mb-16"
                 >
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto italic">
-                        "A segurança de uma advocacia que compreende os fluxos internos do sistema financeiro."
+                        A segurança de uma advocacia que compreende os fluxos internos do sistema financeiro.
                     </p>
                 </motion.div>
 
@@ -196,7 +195,7 @@ const About = () => {
                     className="mt-16 text-center"
                 >
                     <p className="text-xl text-gray-300 italic max-w-4xl mx-auto">
-                        "Resultados construídos com base em experiência real e domínio técnico do mercado."
+                        Resultados construídos com base em experiência real e domínio técnico do mercado.
                     </p>
                 </motion.div>
             </div>

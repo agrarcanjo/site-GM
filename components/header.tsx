@@ -67,12 +67,6 @@ const Header = () => {
                             Áreas de Atuação
                         </button>
                         <button
-                            onClick={() => scrollToSection('depoimentos')}
-                            className="nav-link text-white hover:text-light-green font-medium transition-colors"
-                        >
-                            Depoimentos
-                        </button>
-                        <button
                             onClick={() => scrollToSection('faq')}
                             className="nav-link text-white hover:text-light-green font-medium transition-colors"
                         >
