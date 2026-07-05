@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Instagram, Linkedin, Mail, Phone } from 'lucide-react'
+import { WHATSAPP_BUSINESS_URL } from '@/lib/whatsapp'
 
 const Footer = () => {
   return (
@@ -79,7 +80,7 @@ const Footer = () => {
                 <Phone size={18} className="text-light-green" />
                 <div>
                   <a 
-                    href="https://wa.me/message/L67YIHZ3UVYDJ1" 
+                    href={WHATSAPP_BUSINESS_URL} 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-light-green transition-colors"

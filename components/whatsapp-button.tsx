@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { MessageSquare } from 'lucide-react'
+import { openWhatsApp, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/whatsapp'
 
 const WhatsAppButton = () => {
   const [mounted, setMounted] = useState(false)
@@ -23,16 +24,9 @@ const WhatsAppButton = () => {
 
   if (!mounted) return null
 
-  const openWhatsApp = () => {
-    const message = encodeURIComponent(
-      'Olá! Vim através do site e gostaria de saber mais sobre os serviços de advocacia em crédito rural.'
-    )
-    window.open(`https://wa.me/5562994858709?text=${message}`, '_blank')
-  }
-
   return (
     <button
-      onClick={openWhatsApp}
+      onClick={() => openWhatsApp(WHATSAPP_DEFAULT_MESSAGE)}
       className={`whatsapp-btn transition-all duration-300 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}

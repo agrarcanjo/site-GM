@@ -5,6 +5,7 @@ import {motion} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 import {useToast} from '@/hooks/use-toast'
 import {Clock, Instagram, Linkedin, Mail, MapPin, MessageSquare, Phone, Send} from 'lucide-react'
+import {getWhatsAppUrl, openWhatsApp} from '@/lib/whatsapp'
 
 const Contact = () => {
     const [mounted, setMounted] = useState(false)
@@ -54,11 +55,8 @@ const Contact = () => {
 ${formData.message}
             `.trim()
 
-            // Codificar a mensagem para URL
-            const encodedMessage = encodeURIComponent(whatsappMessage)
-            
-            // Abrir WhatsApp com a mensagem pré-preenchida
-            window.open(`https://wa.me/5562994858709?text=${encodedMessage}`, '_blank')
+            // Abrir WhatsApp Business com a mensagem pré-preenchida
+            window.open(getWhatsAppUrl(whatsappMessage), '_blank')
 
             // Mostrar feedback de sucesso
             toast({
@@ -93,7 +91,7 @@ ${formData.message}
             icon: Phone,
             title: 'Telefone/WhatsApp',
             content: '(62) 99485-8709',
-            action: () => window.open('https://wa.me/message/L67YIHZ3UVYDJ1', '_blank')
+            action: () => openWhatsApp()
         },
         {
             icon: Mail,
@@ -200,7 +198,7 @@ ${formData.message}
                                     <Linkedin size={24}/>
                                 </a>
                                 <button
-                                    onClick={() => window.open('https://wa.me/message/L67YIHZ3UVYDJ1', '_blank')}
+                                    onClick={() => openWhatsApp()}
                                     className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                                 >
                                     <MessageSquare size={24}/>
