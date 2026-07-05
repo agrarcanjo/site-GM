@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 import {useToast} from '@/hooks/use-toast'
 import {Clock, Instagram, Linkedin, Mail, MapPin, MessageSquare, Phone, Send} from 'lucide-react'
-import {getWhatsAppUrl, openWhatsApp} from '@/lib/whatsapp'
+import {openWhatsApp, WHATSAPP_PHONE_NUMBER} from '@/lib/whatsapp'
 
 const Contact = () => {
     const [mounted, setMounted] = useState(false)
@@ -46,17 +46,18 @@ const Contact = () => {
             const whatsappMessage = `
 *Nova Consulta Jurídica*
 
-👤 *Nome:* ${formData.name}
-📧 *Email:* ${formData.email}
-📱 *Telefone:* ${formData.phone}
-📋 *Assunto:* ${formData.subject}
+*Nome:* ${formData.name}
+*Email:* ${formData.email}
+*Telefone:* ${formData.phone}
+*Assunto:* ${formData.subject}
 
-📝 *Mensagem:*
+*Mensagem:*
 ${formData.message}
             `.trim()
 
-            // Abrir WhatsApp Business com a mensagem pré-preenchida
-            window.open(getWhatsAppUrl(whatsappMessage), '_blank')
+            // Abrir WhatsApp com a mensagem pré-preenchida (formato por número)
+            const encodedMessage = encodeURIComponent(whatsappMessage)
+            window.open(`https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodedMessage}`, '_blank')
 
             // Mostrar feedback de sucesso
             toast({
